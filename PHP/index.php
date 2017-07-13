@@ -26,31 +26,30 @@ foreach($array as $fruit => $status) {
     break;
 }
 echo $result;
-strtoupper
 
 
 
 
 
+?>
 
 
 
+<html>
+<head>
+<meta charset='utf-8'/>
+<title>PHP</title>
+</head>
+<body>
+<form method='post' action='check.php'>
+    <input type='text' name='login'/>
+    <input type='password' name='pass'/>
+    <input type='submit' value='GO'/>
 
-//<html>
-//<head>
-//<meta charset='utf-8'/>
-//<title>PHP</title>
-//</head>
-//<body>
-//<form method='post' action='check.php'>
-//    <input type='text' name='login'/>
-//    <input type='password' name='pass'/>
-//    <input type='submit' value='GO'/>
-//
-//
-//</form>
-//
-//</body>
-//
-//</html>
+
+</form>
+
+</body>
+
+</html>
 
