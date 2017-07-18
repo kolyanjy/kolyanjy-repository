@@ -1,19 +1,10 @@
 <?php
 
 function test (array $numbers, $num){
-    $flag = 0;
-    foreach ($numbers as $arr_num){
-        if($arr_num == $num){
-            echo 'true';
-            return true;
-            break;
-            ++$flag;
-        }
+    foreach ($numbers as $arr_num) {
+        if ($arr_num == $num) return true;
     }
-    if(!$flag){
-        echo 'false';
-        return false;
-    }
+    return false;
 }
 
-test([1, 2, 3 ,4], 4);
+test([1, 2, 3, 4, 5], 4);
