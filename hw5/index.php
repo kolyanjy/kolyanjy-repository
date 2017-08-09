@@ -45,7 +45,9 @@
     </form>
     <button  class="btn btn-default" id="registration">Регистрация</button>
 </div>
-
+<!--<div class="view">-->
+<!--    <button class="view_btn btn btn-default center-block">показать контакты</button>-->
+<!--</div>-->
 <script src="jquery-3.2.1.min.js"></script>
 <script src="jquery_validate/dist/jquery.validate.js"></script>
 <script src="custom.js"></script>

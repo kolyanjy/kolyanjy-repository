@@ -60,7 +60,6 @@ $('#myForm').validate({
             type: 'POST',
             data: getFormData(),
             success: function (data) {
-                console.log(data);
                 processingData(data);
             }
         });
@@ -82,11 +81,18 @@ function getFormData() {
 
 function processingData(data) {
     if(data) {
+        console.log(data);
         $('.container').html("<div class='row text-center'>" +
             "Здравствуйте, " + data +" </div>");
+        // $('.view').css('display', 'block');
     }
     else {
         alert('user not found');
     }
 }
-console.log("sd");
+
+// $('.view').click(function() {
+//     $.ajax({
+//         url:
+//     })
+// });

@@ -24,15 +24,20 @@ $getUser = mysqli_query($connect, $query);
 if ($getUser) {
     $result = mysqli_fetch_assoc($getUser);
     $userId = $result['id'];
-    $name = $result['second_name'] . ' ' . $result['first_name'];
+    $name = $result['second_name'] . ' ' . $result['first_name'] . '. список ваших контактов:</br>';
     echo $name;
-    $queryContacts = "SELECT ALL phone_number, first_name, second_name FROM contacts WHERE  user_id = '{$userId}'";
+    $queryContacts = "SELECT phone_number, first_name, second_name FROM contacts WHERE user_id = '{$userId}'";
     $getContacts = mysqli_query($connect, $queryContacts);
-    if($getContacts){
-        $resultContacts = mysqli_fetch_assoc($getContacts);
-        $contacts = ' список ваших контактов: <br>' .$resultContacts['phone_number']
-            . ' ' . $resultContacts['second_name'] . ' ' . $resultContacts['first_name'] . '<br>';
-        echo $contacts;
+    $resultArr = [];
+    while($row = mysqli_fetch_assoc($getContacts)){
+        array_push($resultArr, $row);
+
+    }
+    foreach($resultArr as $name){
+        foreach ($name as $val){
+            echo $val . ' ';
+        }
+        echo '<br>';
     }
 }else {
     echo false;
